@@ -83,34 +83,55 @@
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     <title>Buy a T-Shirt</title>
+
+    <link rel="stylesheet" href="./stylesheets/generic.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./stylesheets/styles.css" />
   </head>
   <body>
     <header>
-      <h1>Buy Your Custom T-Shirt</h1>
+      <h1 class="heading">Buy Your Custom T-Shirt</h1>
+
+      <video width="420" poster=".video/t-shirt-image.jpg" controls preload>
+        <source src="./video/t-shirt-video.mp4" type="video/mp4" />
+
+        I'm sorry, your browser doesn't support HTML5 video.
+        <!-- fallback if the browser can't play video -->
+      </video>
     </header>
+
     <main>
-      <form method="POST">
-        <h2>Enter Your Details</h2>
-        <label for="first_name">
+      <h2 class="heading">Enter Your Details</h2>
+      <form method="POST" class="form">
+        <label for="first_name" class="label">
           First Name:
           <input
             type="text"
             id="first-name"
             name="first-name"
             placeholder="What is your first name?"
+            class="manual_input"
           />
         </label>
 
         <br />
         <br />
 
-        <label for="last_name">
+        <label for="last_name" class="label">
           Last Name:
           <input
             type="text"
             id="last-name"
             name="last-name"
             placeholder="What is your last name?"
+            class="manual_input"
           />
         </label>
 
@@ -124,6 +145,7 @@
             id="email"
             name="email"
             placeholder="What is your email?"
+            class="manual_input"
           />
         </label>
 
@@ -139,148 +161,263 @@
             placeholder="What's your address?"
             rows="6"
             cols="30"
+            class="manual_input"
           ></textarea>
         </label>
 
-        <h2>Customise Your T-Shirt</h2>
+        <br />
 
-        <label for="size">
+        <h2 class="heading">Customise Your T-Shirt</h2>
+
+        <label for="size" class="label">
           Size:
-          <input type="radio" id="XS" value="XS" name="size" />
-          <label for="XS">XS</label>
-          <input type="radio" id="S" value="S" name="size" />
-          <label for="S">S</label>
-          <input type="radio" id="M" value="M" name="size" />
-          <label for="M">M</label>
-          <input type="radio" id="L" value="L" name="size" />
-          <label for="L">L</label>
-          <input type="radio" id="XL" value="XL" name="size" />
-          <label for="XL">XL</label>
+          <input
+            type="radio"
+            id="XS"
+            value="XS"
+            name="size"
+            class="radio_input"
+          />
+          <label for="XS" class="radio_label">XS</label>
+          <input
+            type="radio"
+            id="S"
+            value="S"
+            name="size"
+            class="radio_input"
+          />
+          <label for="S" class="radio_label">S</label>
+          <input
+            type="radio"
+            id="M"
+            value="M"
+            name="size"
+            class="radio_input"
+          />
+          <label for="M" class="radio_label">M</label>
+          <input
+            type="radio"
+            id="L"
+            value="L"
+            name="size"
+            class="radio_input"
+          />
+          <label for="L" class="radio_label">L</label>
+          <input
+            type="radio"
+            id="XL"
+            value="XL"
+            name="size"
+            class="radio_input"
+          />
+          <label for="XL" class="radio_label">XL</label>
         </label>
 
         <br />
         <br />
 
-        <label for="colour">
+        <label for="colour" class="label">
           Colour:
           <br />
-          <input type="checkbox" id="black" value="black" name="colour" />
+          <input
+            type="checkbox"
+            id="black"
+            value="black"
+            name="colour"
+            class="checkbox_input"
+          />
           <img
             src="./icons/black.png"
             alt="black square"
             width="25"
             height="25"
+            class="input_image"
           />
-          <label for="black">Black</label>
+          <label for="black" class="checkbox_label">Black</label>
           <br />
 
-          <input type="checkbox" id="white" value="white" name="colour" />
+          <input
+            type="checkbox"
+            id="white"
+            value="white"
+            name="colour"
+            class="checkbox_input"
+          />
           <img
             src="./icons/white.png"
             alt="white square"
             width="25"
             height="25"
+            class="input_image"
           />
-          <label for="white">White</label>
+          <label for="white" class="checkbox_label">White</label>
           <br />
 
-          <input type="checkbox" id="red" value="red" name="colour" />
-          <img src="./icons/red.png" alt="red square" width="25" height="25" />
-          <label for="red">Red</label>
+          <input
+            type="checkbox"
+            id="red"
+            value="red"
+            name="colour"
+            class="checkbox_input"
+          />
+          <img
+            src="./icons/red.png"
+            alt="red square"
+            width="25"
+            height="25"
+            class="input_image"
+          />
+          <label for="red" class="checkbox_label">Red</label>
           <br />
 
-          <input type="checkbox" id="blue" value="blue" name="colour" />
+          <input
+            type="checkbox"
+            id="blue"
+            value="blue"
+            name="colour"
+            class="checkbox_input"
+          />
           <img
             src="./icons/blue.png"
             alt="blue square"
             width="25"
             height="25"
+            class="input_image"
           />
-          <label for="blue">Blue</label>
+          <label for="blue" class="checkbox_label">Blue</label>
           <br />
 
-          <input type="checkbox" id="green" value="green" name="colour" />
+          <input
+            type="checkbox"
+            id="green"
+            value="green"
+            name="colour"
+            class="checkbox_input"
+          />
           <img
             src="./icons/green.png"
             alt="green square"
             width="25"
             height="25"
+            class="input_image"
           />
-          <label for="green">Green</label>
+          <label for="green" class="checkbox_label">Green</label>
           <br />
 
-          <input type="checkbox" id="yellow" value="yellow" name="colour" />
+          <input
+            type="checkbox"
+            id="yellow"
+            value="yellow"
+            name="colour"
+            class="checkbox_input"
+          />
           <img
             src="./icons/yellow.png"
             alt="yellow square"
             width="25"
             height="25"
+            class="input_image"
           />
-          <label for="yellow">Yellow</label>
+          <label for="yellow" class="checkbox_label">Yellow</label>
           <br />
         </label>
 
         <br />
         <br />
 
-        <label for="pattern">
+        <label for="pattern" class="label">
           Pattern:
           <br />
-          <input type="checkbox" id="plain" value="plain" name="pattern" />
+          <input
+            type="checkbox"
+            id="plain"
+            value="plain"
+            name="pattern"
+            class="checkbox_input"
+          />
           <img
             src="./icons/white.png"
             alt="plain pattern"
             width="25"
             height="25"
+            class="input_image"
           />
-          <label for="plain">Plain</label>
+          <label for="plain" class="checkbox_label">Plain</label>
           <br />
 
-          <input type="checkbox" id="checked" value="checked" name="pattern" />
+          <input
+            type="checkbox"
+            id="checked"
+            value="checked"
+            name="pattern"
+            class="checkbox_input"
+          />
           <img
             src="./icons/checked.png"
             alt="checked pattern"
             width="25"
             height="25"
+            class="input_image"
           />
-          <label for="checked">Checked</label>
+          <label for="checked" class="checkbox_label">Checked</label>
           <br />
 
-          <input type="checkbox" id="plaid" value="plaid" name="pattern" />
+          <input
+            type="checkbox"
+            id="plaid"
+            value="plaid"
+            name="pattern"
+            class="checkbox_input"
+          />
           <img
             src="./icons/plaid.jpg"
             alt="plaid pattern"
             width="25"
             height="25"
+            class="input_image"
           />
-          <label for="plaid">Plaid</label>
+          <label for="plaid" class="checkbox_label">Plaid</label>
           <br />
 
-          <input type="checkbox" id="dotted" value="dotted" name="pattern" />
+          <input
+            type="checkbox"
+            id="dotted"
+            value="dotted"
+            name="pattern"
+            class="checkbox_input"
+          />
           <img
             src="./icons/dotted.png"
             alt="dotted pattern"
             width="25"
             height="25"
+            class="input_image"
           />
-          <label for="dotted">Dotted</label>
+          <label for="dotted" class="checkbox_label">Dotted</label>
           <br />
 
-          <input type="checkbox" id="striped" value="striped" name="pattern" />
+          <input
+            type="checkbox"
+            id="striped"
+            value="striped"
+            name="pattern"
+            class="checkbox_input"
+          />
           <img
             src="./icons/striped.png"
             alt="striped pattern"
             width="25"
             height="25"
+            class="input_image"
           />
-          <label for="striped">Striped</label>
+          <label for="striped" class="checkbox_label">Striped</label>
           <br />
         </label>
 
         <br />
         <br />
 
-        <button type="submit">Submit</button>
+        <button type="submit" class="submit_button">Submit</button>
       </form>
     </main>
   </body>
